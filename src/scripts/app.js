@@ -23,6 +23,10 @@ const password = form.addInputObserver('password', 'input[name="password"]')
 
 // add validators for password
 password.addValidator('length', value => ValidatorLength(value, 8, 0))
+password.addValidator('lowercase', ValidatorLowercase)
+password.addValidator('uppercase', ValidatorUppercase)
+password.addValidator('decimal', ValidatorDecimal)
+password.addValidator('specialSigns', ValidatorSpecialSigns)
 
 // enable / disable submit button
 const submitDom = formDom.querySelector('input[type="submit"]')
