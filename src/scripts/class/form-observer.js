@@ -1,3 +1,6 @@
+
+import InputObserver from './input-observer.js'
+
 export default class FormObserver {
   constructor (formDom) {
     this.formDom = formDom
@@ -12,6 +15,19 @@ export default class FormObserver {
       event.preventDefault()
       this.submit()
     })
+  }
+
+  addInputObserver (inputName, selector) {
+    const observable = this.formDom.querySelector(selector)
+    if (observable) {
+      const observer = this.input[inputName] = new InputObserver(inputName, observable)
+      return observer
+    }
+    return null
+  }
+
+  getInputObserver (inputName) {
+    return this.input[inputName] ? this.input[inputName] : null
   }
 
   isValid () {
