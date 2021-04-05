@@ -97,5 +97,12 @@ form.onSubmit(() => {
   // own code here...
   // eg. async xhr to api
 
-  console.log('submit')
+  // only for demo
+  const target = formDom.getAttribute('target')
+  alert('Form send -> ' + target)
+
+  // form reset
+  document.getElementById('registrationform-username').value = ''
+  document.getElementById('registrationform-password').value = ''
+  document.querySelectorAll('[data-validation]').forEach(setFieldFeedbackReset)
 })
