@@ -28,6 +28,38 @@ password.addValidator('uppercase', ValidatorUppercase)
 password.addValidator('decimal', ValidatorDecimal)
 password.addValidator('specialSigns', ValidatorSpecialSigns)
 
+// form states processing
+
+const setFieldFeedbackReset = feedbackDom => {
+  if (feedbackDom.classList.contains('valid')) feedbackDom.classList.remove('valid')
+  if (feedbackDom.classList.contains('invalid')) feedbackDom.classList.remove('invalid')
+}
+
+const setFieldFeedbackValid = feedbackDom => {
+  setFieldFeedbackReset(feedbackDom)
+  if (!feedbackDom.classList.contains('valid')) feedbackDom.classList.add('valid')
+}
+
+const setFieldFeedbackInalid = feedbackDom => {
+  setFieldFeedbackReset(feedbackDom)
+  if (!feedbackDom.classList.contains('invalid')) feedbackDom.classList.add('invalid')
+}
+
+const updatePasswordFeedback = state => {
+  // const isValid = password.isValid()
+  for (const name in state) {
+    const selector = '[data-validation="password.' + name.toLowerCase() + '"]'
+    const feedbackDom = formDom.querySelector(selector)
+    if (feedbackDom) {
+      if (state[name]) {
+        setFieldFeedbackValid(feedbackDom)
+      } else {
+        setFieldFeedbackInalid(feedbackDom)
+      }
+    }
+  }
+}
+
 // enable / disable submit button
 const submitDom = formDom.querySelector('input[type="submit"]')
 
@@ -45,6 +77,15 @@ const disableSubmitBtn = () => {
 
 // onChange event to update validation feedback
 form.onChange((observerName, state) => {
+  switch (observerName) {
+    // case 'username':
+    //   updateUsernameFeedback(state)
+    //   break
+    case 'password':
+      updatePasswordFeedback(state)
+      break
+  }
+
   if (form.isValid()) {
     enableSubmitBtn()
   } else {
