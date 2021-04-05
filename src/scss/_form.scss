@@ -68,3 +68,45 @@ input[type=submit] {
   }
 
 }
+
+// validation feedback
+
+.form-validation-feedback {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+}
+
+.validation-icon {
+  font-family: "ITC Zapf Dingbats";
+  padding-right: $grid-space/2; // @ TODO - check design, not inspectable
+}
+
+.valid {
+
+  .validation-icon {
+    &:before {
+      content: "4";
+      color: $color-success;
+    }
+  }
+
+}
+
+.invalid {
+
+  .validation-icon {
+    &:before {
+      content: "8";
+      color: $color-error;
+    }
+  }
+
+}

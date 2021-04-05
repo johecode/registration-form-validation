@@ -1,7 +1,21 @@
 
+@font-face {
+  font-family: "ITC Zapf Dingbats";
+  src: url("//db.onlinewebfonts.com/t/2ec523dcfeb2201a5e4f985463f520f8.eot");
+  src: url("//db.onlinewebfonts.com/t/2ec523dcfeb2201a5e4f985463f520f8.eot?#iefix") format("embedded-opentype"),
+       url("//db.onlinewebfonts.com/t/2ec523dcfeb2201a5e4f985463f520f8.woff2") format("woff2"),
+       url("//db.onlinewebfonts.com/t/2ec523dcfeb2201a5e4f985463f520f8.woff") format("woff"),
+       url("//db.onlinewebfonts.com/t/2ec523dcfeb2201a5e4f985463f520f8.ttf") format("truetype"),
+       url("//db.onlinewebfonts.com/t/2ec523dcfeb2201a5e4f985463f520f8.svg#ITC Zapf Dingbats") format("svg");
+}
+
 h1 {
   font-size: $h1-font-size;
   font-weight: normal;
   margin: 0;
   padding: $grid-space 0;
+}
+
+ul {
+  margin: 0;
 }

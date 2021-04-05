@@ -8,7 +8,8 @@ $grid-space: 16px;
 $color-main: #000;
 $color-background: #fff;
 
-$container-border: 2px solid $color-main;
+$color-success: #009e2d;
+$color-error: #9e0000;
 
 // typo
 
@@ -20,6 +21,8 @@ $font-weight: 400;
 $h1-font-size: 24px;
 
 // form
+
+$container-border: 2px solid $color-main;
 
 $form-iput-border: $container-border;
 
