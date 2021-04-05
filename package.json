@@ -1,0 +1,16 @@
+{
+  "name": "registration-form-validation",
+  "version": "1.0.0",
+  "description": "Frontend-Coding-challenge-Feb-2020-RegistrationForm",
+  "main": "src/app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johecode/registration-form-validation.git"
+  },
+  "author": "johecode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johecode/registration-form-validation/issues"
+  },
+  "homepage": "https://github.com/johecode/registration-form-validation#readme"
+}
