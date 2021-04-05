@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Frontend-Coding-challenge-Feb-2020-RegistrationForm",
   "main": "src/app.js",
+  "scripts": {
+    "watch": "npx mix watch",
+    "build": "npx mix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johecode/registration-form-validation.git"
@@ -12,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/johecode/registration-form-validation/issues"
   },
-  "homepage": "https://github.com/johecode/registration-form-validation#readme"
+  "homepage": "https://github.com/johecode/registration-form-validation#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "laravel-mix": "^6.0.13",
+    "laravel-mix-clean": "^0.1.0",
+    "postcss": "^8.2.9",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1"
+  }
 }
