@@ -1,1 +1,29 @@
-FORM
+<form method="post" target="/api/registration">
+
+  <div class="form-row">
+
+    <div class="form-field">
+      <label for="registrationform-username">Username</label>
+      <input id="registrationform-username" type="text" name="username" value="" placeholder="Username">
+    </div>
+
+    <div class="form-field">
+      <label for="registrationform-password">Password</label>
+      <input id="registrationform-password" type="password" name="password" value="" placeholder="Password">
+    </div>
+
+  </div>
+
+  <div class="form-row">
+
+    <div class="form-field grid-padding-y">
+      VALIDATION FEEDBACK
+    </div>
+
+    <div class="form-field grid-padding-y">
+      <input type="submit" value="Submit" disabled />
+    </div>
+
+  </div>
+
+</form>

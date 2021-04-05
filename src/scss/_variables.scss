@@ -16,3 +16,21 @@ $font-color: $color-main;
 
 $font-size: 18px;
 $font-weight: 400;
+
+$h1-font-size: 24px;
+
+// form
+
+$form-iput-border: $container-border;
+
+$form-iput-color: $color-main;
+$form-iput-bg: $color-background;
+
+$form-iput-font-size: $font-size;
+$form-iput-font-weight: $font-weight;
+
+$form-button-color: $color-background;
+$form-button-background: $color-main;
+
+$form-button-color-disabled: #ccc;
+$form-button-background-disabled: #333;

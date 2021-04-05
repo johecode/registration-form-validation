@@ -1,0 +1,70 @@
+
+label {
+  padding: $grid-space 0;
+  display: inline-block; // inline for horizontal form
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+}
+
+input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  box-sizing:border-box;
+  display: block;
+  width: 100%;
+  border: $form-iput-border;
+  border-radius: 0;
+
+  color: $form-iput-color;
+  background: $form-iput-bg;
+
+  padding: $grid-space;
+  margin: 0;
+
+  font-size: $form-iput-font-size;
+  font-weight: $form-iput-font-weight;
+  line-height: 1;
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+
+}
+
+input[type=submit] {
+  background: $form-button-background;
+  color: $form-button-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    color: $form-button-color-disabled;
+    background: $form-button-background-disabled;
+  }
+
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  align-items: flex-end; // display second row at end
+
+  > * {
+    flex: 1 0 0%;
+    width: 50% !important;
+    padding-left: $grid-space/2;
+    padding-right: $grid-space/2;
+    box-sizing: border-box;
+  }
+
+}
