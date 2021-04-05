@@ -8,6 +8,8 @@ Simple Form Demo
 - dynamic input validators
 - responsive grid using flex
 
+[DEMO](http://demo.joheco.de/registration-form-validation/)
+
 ## Installation
 
 ```sh
