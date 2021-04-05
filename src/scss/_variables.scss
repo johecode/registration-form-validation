@@ -1,6 +1,12 @@
 
 // grid
 
+$breakpoints: (
+  mobile: 320px,
+  tablet: 768px,
+  desktop: 992px
+);
+
 $grid-space: 16px;
 
 // colors

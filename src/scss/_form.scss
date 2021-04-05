@@ -110,3 +110,30 @@ input[type=submit] {
   }
 
 }
+
+// responsive
+
+@include desktop () {
+
+  .form-row {
+
+    &.desktop-col-right {
+      flex-direction: column;
+    }
+
+  }
+
+}
+
+@include mobile () {
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      width: 100% !important;
+    }
+
+  }
+}
