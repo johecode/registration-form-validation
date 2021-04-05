@@ -6,6 +6,8 @@ export default class InputObserver {
     this.validator = {}
     this.state = {}
 
+    this.onChangeCallback = null
+
     this.init()
   }
 
@@ -22,7 +24,7 @@ export default class InputObserver {
       const validator = this.validator[name]
       this.state[name] = validator(this.value)
     }
-    console.log('validate', this.state)
+    this.changed()
   }
 
   addValidator (validatorName, validator) {
@@ -39,5 +41,15 @@ export default class InputObserver {
       }
     }
     return true
+  }
+
+  onChange (callback) {
+    this.onChangeCallback = callback
+  }
+
+  changed () {
+    if (typeof this.onChangeCallback === 'function') {
+      this.onChangeCallback(this.name, this.state)
+    }
   }
 }

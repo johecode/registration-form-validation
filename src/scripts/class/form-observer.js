@@ -7,6 +7,9 @@ export default class FormObserver {
 
     this.input = {}
 
+    this.onChangeCallback = null
+    this.onSubmitCallback = null
+
     this.init()
   }
 
@@ -21,6 +24,11 @@ export default class FormObserver {
     const observable = this.formDom.querySelector(selector)
     if (observable) {
       const observer = this.input[inputName] = new InputObserver(inputName, observable)
+      observer.onChange((name, state) => {
+        if (typeof this.onChangeCallback === 'function') {
+          this.onChangeCallback(name, state)
+        }
+      })
       return observer
     }
     return null
@@ -31,12 +39,25 @@ export default class FormObserver {
   }
 
   isValid () {
+    for (const name in this.input) {
+      if (!this.input[name].isValid()) {
+        return false
+      }
+    }
     return true
   }
 
   submit () {
-    if (this.isValid()) {
-      console.log('submit')
+    if (this.isValid() && typeof this.onSubmitCallback === 'function') {
+      this.onSubmitCallback()
     }
+  }
+
+  onChange (callback) {
+    this.onChangeCallback = callback
+  }
+
+  onSubmit (callback) {
+    this.onSubmitCallback = callback
   }
 }
