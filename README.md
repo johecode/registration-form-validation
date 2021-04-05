@@ -1,6 +1,9 @@
 # registration-form-validation
 Frontend-Coding-challenge-Feb-2020-RegistrationForm
 
+Using laravel-mix for bundling
+[laravel-mix](https://laravel-mix.com/docs/6.0/examples)
+
 ## Installation
 
 Simple demo
