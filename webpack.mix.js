@@ -21,3 +21,21 @@ mix.setResourceRoot('/')
 // assets
 mix.sass('src/scss/app.scss', 'css')
 mix.js('src/scripts/app.js', 'js')
+
+/**
+ * enable browser sync
+ *
+ * npm i browser-sync --save-dev
+ * npm i browser-sync-webpack-plugin --save-dev
+ *
+ * https://laravel-mix.com/docs/5.0/browsersync
+ * https://browsersync.io/docs/options/
+ */
+
+// mix.browserSync({
+//   injectChanges: false,
+//   files: [
+//     "css/*.css",
+//     "js/*.js"
+//   ]
+// })
