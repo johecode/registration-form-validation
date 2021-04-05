@@ -1,3 +1,4 @@
+
 export default class InputObserver {
   constructor (name, dom) {
     this.name = name
